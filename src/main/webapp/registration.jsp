@@ -3,6 +3,7 @@
     Created on : 15-ott-2019, 10.42.32
     Author     : rcosco
 --%>
+<%@page import="com.seta.util.Utility"%>
 <%@page import="java.util.List"%>
 <%@page import="com.seta.db.Entity"%>
 <%@page import="com.seta.entity.Item"%>
@@ -18,7 +19,7 @@
     <!-- begin::Head -->
     <head>
         <meta charset="utf-8" />
-        <title>Microcredito</title>
+        <title><%=Utility.titlepro%></title>
         <meta name="description" content="Login page example">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
         <script src="resource/webfont.js"></script>

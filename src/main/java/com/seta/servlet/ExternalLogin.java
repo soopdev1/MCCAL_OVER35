@@ -58,12 +58,11 @@ public class ExternalLogin extends HttpServlet {
         if (us != null) {
             long diff = new Date().getTime() - us.getToken_timestamp().getTime();
             if (diff < 10000 && us_monitor.getToken().equals(us.getToken())) {
-                if (request.getContextPath().contains("Microcredito")) {
+                if (request.getContextPath().contains("MCCAL")) {
                     request.getSession().setAttribute("src", "../..");
                 } else {
                     request.getSession().setAttribute("src", e.getPath("dominio"));
                 }
-
                 if (us.getStato() != 0) {
                     request.getSession().setAttribute("user", us);
                     e.insertTracking(us.getUsername(), "Log In");

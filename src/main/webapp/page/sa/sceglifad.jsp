@@ -39,7 +39,7 @@
 <html>
     <head>
         <meta charset="utf-8" />
-        <title>Microcredito - Scegli Docente per FAD</title>
+        <title><%=Utility.titlepro%> - Scegli Docente per FAD</title>
         <meta name="description" content="Updates and statistics">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
         <script src="<%=src%>/resource/webfont.js"></script>

@@ -1,4 +1,5 @@
 
+<%@page import="com.seta.util.Utility"%>
 <%@page import="com.seta.db.Entity"%>
 <%@page import="java.util.List"%>
 <%@page import="com.seta.domain.User"%>
@@ -20,7 +21,7 @@
 <html>
     <head>
         <meta charset="utf-8" />
-        <title>Microcredito - Docenti</title>
+        <title><%=Utility.titlepro%> - Docenti</title>
         <meta name="description" content="Updates and statistics">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 

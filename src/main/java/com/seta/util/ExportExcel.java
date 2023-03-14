@@ -230,9 +230,7 @@ public class ExportExcel {
         Entity e = new Entity();
         double euro_ore = Double.parseDouble(e.getPath("euro_ore"));
         File template = new File(e.getPath("template_excel"));
-//        File template = new File("C:/mnt/Microcredito/Cloud/template_estrazione_allievi.xlsx");
         String output_name = e.getPath("output_excel_archive") + "export_" + new SimpleDateFormat("yyyyMMddHHmmss").format(new Date()) + ".xlsx";
-//        String output_name = "C:/mnt/Microcredito/estrazioni/" + "export_" + new SimpleDateFormat("yyyyMMddHHmmss").format(new Date()) + ".xlsx";
         e.close();
         try {
 
@@ -505,7 +503,6 @@ public class ExportExcel {
 
         ProgettiFormativi p = e.getEm().find(ProgettiFormativi.class, idprogetto);
 
-//        String path = "F:\\mnt\\Microcredito\\Cloud\\tabella1_template_rev (1).xlsx";
 //        File template = new File(path);
 //        String output_name = path + "_COMPILATA.xlsx";
         File template = new File(e.getPath("template_tabella_1"));

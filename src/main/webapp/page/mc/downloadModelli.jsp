@@ -1,3 +1,4 @@
+<%@page import="com.seta.util.Utility"%>
 <%@page import="com.seta.db.Entity"%>
 <%@page import="com.seta.domain.User"%>
 <%@page import="com.seta.db.Action"%>
@@ -18,7 +19,7 @@
 <html>
     <head>
         <meta charset="utf-8" />
-        <title>Microcredito - Modelli</title>
+        <title><%=Utility.titlepro%> - Modelli</title>
         <meta name="description" content="Updates and statistics">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
         <script src="<%=src%>/resource/webfont.js"></script>

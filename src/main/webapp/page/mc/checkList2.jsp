@@ -4,6 +4,7 @@
     Author     : rcosco
 --%>
 
+<%@page import="com.seta.util.Utility"%>
 <%@page import="java.util.ArrayList"%>
 <%@page import="java.util.stream.Collectors"%>
 <%@page import="java.util.Date"%>
@@ -47,7 +48,7 @@
 <html>
     <head>
         <meta charset="utf-8" />
-        <title>Microcredito - CheckList 2</title>
+        <title><%=Utility.titlepro%> - CheckList 2</title>
         <meta name="description" content="Updates and statistics">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
         <script src="<%=src%>/resource/webfont.js"></script>

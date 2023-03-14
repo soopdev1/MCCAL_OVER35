@@ -4,6 +4,7 @@
     Author     : rcosco
 --%>
 
+<%@page import="com.seta.util.Utility"%>
 <%@page import="java.util.Date"%>
 <%@page import="java.text.SimpleDateFormat"%>
 <%@page import="com.seta.domain.Docenti"%>
@@ -31,7 +32,7 @@
 <html>
     <head>
         <meta charset="utf-8" />
-        <title>Microcredito - Progetti Formativi</title>
+        <title><%=Utility.titlepro%> - Progetti Formativi</title>
         <meta name="description" content="Updates and statistics">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
         <script src="<%=src%>/resource/webfont.js"></script>

@@ -18,6 +18,7 @@ import com.seta.util.GoogleRecaptcha;
 import com.seta.util.SendMailJet;
 import com.seta.util.Utility;
 import static com.seta.util.Utility.redirect;
+import static com.seta.util.Utility.titlepro;
 import java.io.File;
 import java.io.IOException;
 import java.text.SimpleDateFormat;
@@ -41,7 +42,7 @@ public class Login extends HttpServlet {
         String password = request.getParameter("password");
         Entity e = new Entity();
         User us = e.getUser(user, password);
-        if (request.getContextPath().contains("Microcredito")) {
+        if (request.getContextPath().contains("MCCAL")) {
             request.getSession().setAttribute("src", "../..");
         } else {
             request.getSession().setAttribute("src", e.getPath("dominio"));
@@ -215,7 +216,7 @@ public class Login extends HttpServlet {
                                 .replace("@password", pwd)
                                 .replace("@email_tec", e.getPath("emailtecnico"))
                                 .replace("@email_am", e.getPath("emailamministrativo"));
-                        SendMailJet.sendMail("Microcredito", new String[]{sa.getEmail()}, email_txt, email.getOggetto());
+                        SendMailJet.sendMail(titlepro, new String[]{sa.getEmail()}, email_txt, email.getOggetto());
                         resp.addProperty("result", true);
                     } catch (Exception ex) {
                         e.insertTracking(null, "forgotPwd Errore Invio Mail: " + Utility.estraiEccezione(ex));
@@ -271,7 +272,7 @@ public class Login extends HttpServlet {
                 e.commit();
                 try {
                     Email email_txt = (Email) e.getEmail("reset_password");
-                    SendMailJet.sendMail("Microcredito", new String[]{email}, email_txt.getTesto().replace("@username", us.getUsername())
+                    SendMailJet.sendMail(titlepro, new String[]{email}, email_txt.getTesto().replace("@username", us.getUsername())
                             .replace("@email_tec", e.getPath("emailtecnico"))
                             .replace("@email_am", e.getPath("emailamministrativo"))
                             .replace("@password", pwd), email_txt.getOggetto());

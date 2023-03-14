@@ -3,12 +3,13 @@
     Created on : 15-ott-2019, 10.42.32
     Author     : rcosco
 --%>
+<%@page import="com.seta.util.Utility"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <html>
     <!-- begin::Head -->
     <head>
         <meta charset="utf-8" />
-        <title>Microcredito</title>
+        <title><%=Utility.titlepro%></title>
         <script src="resource/webfont.js"></script>
         <script>
             WebFont.load({

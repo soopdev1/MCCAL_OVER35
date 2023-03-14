@@ -26,7 +26,7 @@
 <html>
     <head>
         <meta charset="utf-8" />
-        <title>Microcredito - Soggetti Attuatori Cerca</title>
+        <title><%=Utility.titlepro%> - Soggetti Attuatori Cerca</title>
         <meta name="description" content="Updates and statistics">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 

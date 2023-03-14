@@ -3,6 +3,7 @@
     Created on : 18-set-2019, 12.31.26
     Author     : rcosco
 --%>
+<%@page import="com.seta.util.Utility"%>
 <%@page import="java.text.SimpleDateFormat"%>
 <%@page import="java.util.List"%>
 <%@page import="com.seta.db.Entity"%>
@@ -27,7 +28,7 @@
 <html>
     <head>
         <meta charset="utf-8" />
-        <title>Microcredito - Profilo</title>
+        <title><%=Utility.titlepro%> - Profilo</title>
         <meta name="description" content="Updates and statistics">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 

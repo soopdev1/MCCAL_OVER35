@@ -1,4 +1,5 @@
 
+<%@page import="com.seta.util.Utility"%>
 <%@page import="com.seta.domain.Condizione_Lavorativa"%>
 <%@page import="com.seta.domain.Comuni"%>
 <%@page import="com.seta.domain.Condizione_Mercato"%>
@@ -38,7 +39,7 @@
 <html>
     <head>
         <meta charset="utf-8" />
-        <title>Microcredito - Allievi</title>
+        <title><%=Utility.titlepro%> - Allievi</title>
         <meta name="description" content="Updates and statistics">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 

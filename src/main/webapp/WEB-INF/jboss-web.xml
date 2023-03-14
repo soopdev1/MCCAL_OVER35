@@ -1,5 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<jboss-web>
-    <context-root>/Microcredito</context-root> 
-    <virtual-host>microcredito.servizi.link</virtual-host>
-</jboss-web>

@@ -16,7 +16,7 @@
     %>
     <head>
         <meta charset="utf-8" />
-        <title>Microcredito</title>S
+        <title><%=Utility.titlepro%></title>S
         <script src="resource/webfont.js"></script>
         <script>
             WebFont.load({

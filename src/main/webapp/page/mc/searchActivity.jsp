@@ -1,4 +1,3 @@
-
 <%@page import="com.seta.entity.Item"%>
 <%@page import="com.seta.db.Entity"%>
 <%@page import="java.util.List"%>
@@ -24,7 +23,7 @@
 <html>
     <head>
         <meta charset="utf-8" />
-        <title>Microcredito - Sedi di Formazione</title>
+        <title><%=Utility.titlepro%> - Sedi di Formazione</title>
         <meta name="description" content="Updates and statistics">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 

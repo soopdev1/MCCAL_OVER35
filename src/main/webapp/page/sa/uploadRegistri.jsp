@@ -5,6 +5,7 @@
 --%>
 
 
+<%@page import="com.seta.util.Utility"%>
 <%@page import="java.util.Date"%>
 <%@page import="java.util.ArrayList"%>
 <%@page import="java.util.stream.Collectors"%>
@@ -56,7 +57,7 @@
     <head>
 
         <meta charset="utf-8" />
-        <title>Microcredito</title>
+        <title><%=Utility.titlepro%></title>
         <meta name="description" content="Updates and statistics">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
         <script src="<%=src%>/resource/webfont.js"></script>

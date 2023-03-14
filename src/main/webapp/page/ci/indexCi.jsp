@@ -1,3 +1,4 @@
+<%@page import="com.seta.util.Utility"%>
 <%@page import="com.seta.db.Action"%>
 <%@page import="com.seta.domain.User"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
@@ -17,7 +18,7 @@
 <html>
     <head>
         <meta charset="utf-8" />
-        <title>Microcredito - Home Page</title>
+        <title><%=Utility.titlepro%> - Home Page</title>
         <meta name="description" content="Updates and statistics">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
@@ -87,7 +88,7 @@
                                 <div class="kt-subheader__main">
                                     <h3 class="kt-subheader__title">Home</h3>
                                     <span class="kt-subheader__separator kt-subheader__separator--v"></span>
-                                    <a class="kt-subheader__breadcrumbs-link">Microcredito</a>
+                                    <a class="kt-subheader__breadcrumbs-link"><%=Utility.titlepro%></a>
                                 </div>
                             </div>
                         </div>

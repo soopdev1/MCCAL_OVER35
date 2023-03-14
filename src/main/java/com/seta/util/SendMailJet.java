@@ -11,6 +11,7 @@ package com.seta.util;
  * and open the template in the editor.
  */
 import com.mailjet.client.ClientOptions;
+import static com.mailjet.client.ClientOptions.builder;
 import com.mailjet.client.MailjetClient;
 import com.mailjet.client.MailjetRequest;
 import com.mailjet.client.MailjetResponse;
@@ -27,7 +28,9 @@ import static com.mailjet.client.resource.Emailv31.resource;
 import com.seta.db.Entity;
 import com.seta.domain.Email;
 import com.seta.domain.ProgettiFormativi;
+import static com.seta.util.Utility.conf;
 import static com.seta.util.Utility.createDir;
+import static com.seta.util.Utility.titlepro;
 import java.io.BufferedWriter;
 import java.io.File;
 import java.io.FileInputStream;
@@ -67,13 +70,11 @@ public class SendMailJet {
         String content_type = "";
         String b64 = "";
 
-        Entity e = new Entity();
-        ClientOptions options = ClientOptions.builder()
-                .apiKey(e.getPath("mailjet_api"))
-                .apiSecretKey(e.getPath("mailjet_secret"))
+        ClientOptions options = builder()
+                .apiKey(conf.getString("mj.apikey"))
+                .apiSecretKey(conf.getString("mj.secret"))
                 .build();
 
-        e.close();
         client = new MailjetClient(options);
         JSONArray dest = new JSONArray();
         JSONArray ccn = new JSONArray();
@@ -91,7 +92,7 @@ public class SendMailJet {
         }
 
         JSONObject mail = new JSONObject().put(Emailv31.Message.FROM, new JSONObject()
-                .put("Email", "yisucal.supporto@microcredito.gov.it")
+                .put("Email", conf.getString("mj.user"))
                 .put("Name", name))
                 .put(Emailv31.Message.TO, dest)
                 .put(Emailv31.Message.BCC, ccn)
@@ -319,7 +320,7 @@ public class SendMailJet {
                 String testohtml = email.getTesto();
                 testohtml = testohtml.replace("@inseriretuttoiltesto", testostart);
                 String[] dest = e.getPath("destinatari_cambiostato").split(";");
-                sendMail("Microcredito", dest, testohtml, email.getOggetto());
+                sendMail(titlepro, dest, testohtml, email.getOggetto());
             }
         } catch (Exception ex1) {
         }
@@ -358,7 +359,7 @@ public class SendMailJet {
                 testohtml = testohtml.replace("@inseriretuttoiltesto", testostart);
                 String[] dest = {p.getSoggetto().getEmail().toLowerCase()};
                 if (EmailValidator.getInstance().isValid(dest[0])) {
-                    sendMail("Microcredito", dest, testohtml, email.getOggetto());
+                    sendMail(titlepro, dest, testohtml, email.getOggetto());
                 }
             }
 

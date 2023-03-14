@@ -12,6 +12,7 @@ import com.seta.domain.Email;
 import com.seta.domain.User;
 import com.seta.util.SendMailJet;
 import com.seta.util.Utility;
+import static com.seta.util.Utility.titlepro;
 import java.io.IOException;
 import java.text.SimpleDateFormat;
 import javax.servlet.ServletException;
@@ -74,7 +75,7 @@ public class OperazioniCi extends HttpServlet {
                     .replace("@end", request.getParameter("end"))
                     .replace("@email_tec", e.getPath("emailtecnico"))
                     .replace("@email_am", e.getPath("emailamministrativo")));
-            SendMailJet.sendMail("Microcredito", new String[]{c.getEmail()},
+            SendMailJet.sendMail(titlepro, new String[]{c.getEmail()},
                     email.getTesto(),
                     email.getOggetto());
             //MANCA USER-----------------------
