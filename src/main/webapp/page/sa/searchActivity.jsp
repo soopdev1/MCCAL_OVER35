@@ -1,9 +1,9 @@
 
-<%@page import="com.seta.domain.CPI"%>
+<%@page import="rc.soop.domain.CPI"%>
 <%@page import="java.util.List"%>
-<%@page import="com.seta.db.Entity"%>
-<%@page import="com.seta.domain.User"%>
-<%@page import="com.seta.db.Action"%>
+<%@page import="rc.soop.db.Entity"%>
+<%@page import="rc.soop.domain.User"%>
+<%@page import="rc.soop.db.Action"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <%
@@ -131,7 +131,7 @@
         <script src="<%=src%>/assets/vendors/general/jquery-validation/dist/additional-methods.js" type="text/javascript"></script>
         <script src="<%=src%>/assets/vendors/custom/components/vendors/jquery-validation/init.js" type="text/javascript"></script>
         <script src="<%=src%>/assets/vendors/general/sweetalert2/dist/sweetalert2.js" type="text/javascript"></script>
-        <script src="<%=src%>/assets/seta/js/utility.js" type="text/javascript"></script>
+        <script src="<%=src%>/assets/soop/js/utility.js" type="text/javascript"></script>
         <script src="<%=src%>/assets/app/bundle/app.bundle.js" type="text/javascript"></script>
         <!--this page -->
         <script src="<%=src%>/assets/vendors/general/bootstrap-select/dist/js/bootstrap-select.js" type="text/javascript"></script>

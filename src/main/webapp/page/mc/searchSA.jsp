@@ -1,10 +1,10 @@
 
-<%@page import="com.seta.domain.EstensioniFile"%>
-<%@page import="com.seta.domain.TipoDoc"%>
-<%@page import="com.seta.domain.TipoDoc_Allievi"%>
-<%@page import="com.seta.db.Entity"%>
-<%@page import="com.seta.domain.User"%>
-<%@page import="com.seta.db.Action"%>
+<%@page import="rc.soop.domain.EstensioniFile"%>
+<%@page import="rc.soop.domain.TipoDoc"%>
+<%@page import="rc.soop.domain.TipoDoc_Allievi"%>
+<%@page import="rc.soop.db.Entity"%>
+<%@page import="rc.soop.domain.User"%>
+<%@page import="rc.soop.db.Action"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <%
@@ -240,11 +240,11 @@
         <script src="<%=src%>/assets/vendors/general/sticky-js/dist/sticky.min.js" type="text/javascript"></script>
         <script src="<%=src%>/assets/demo/default/base/scripts.bundle.js" type="text/javascript"></script>
         <script src="<%=src%>/assets/vendors/general/sweetalert2/dist/sweetalert2.js" type="text/javascript"></script>
-        <script src="<%=src%>/assets/seta/js/utility.js" type="text/javascript"></script>
+        <script src="<%=src%>/assets/soop/js/utility.js" type="text/javascript"></script>
         <script src="<%=src%>/assets/app/bundle/app.bundle.js" type="text/javascript"></script>
         <!-- this page -->
         <script src="<%=src%>/assets/vendors/custom/datatables/datatables.bundle.js" type="text/javascript"></script>
-        <script src="<%=src%>/assets/seta/js/loadTable.js" type="text/javascript"></script>
+        <script src="<%=src%>/assets/soop/js/loadTable.js" type="text/javascript"></script>
         <script src="<%=src%>/assets/app/custom/general/crud/forms/widgets/bootstrap-datepicker.js" type="text/javascript"></script>
         <script src="<%=src%>/assets/vendors/general/bootstrap-datepicker/dist/js/bootstrap-datepicker.js" type="text/javascript"></script>
 

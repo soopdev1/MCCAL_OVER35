@@ -7,10 +7,21 @@
     <button class="kt-header-menu-wrapper-close" id="kt_header_menu_mobile_close_btn"><i class="la la-close"></i></button>
     <div class="kt-header-menu-wrapper " id="kt_header_menu_wrapper">
         <div style="display: inline-block;  vertical-align: middle;  line-height: normal;"> 
-            <a href="http://www.microcredito.gov.it/" target="_blank" ><img height="50" style="padding-left: 10px;padding-top: 10px;" title="Visita il sito dell'Ente Nazionale per il Microcredito" src="<%=src%>/assets/media/logos/enmc.png" ></a>
-            <a href="https://portale.regione.calabria.it/website/" target="_blank"><img height="50" style="padding-left: 10px;padding-top: 10px;" title="Visita il sito delle Regione Calabria" src="<%=src%>/assets/media/logos/rc.png"></a>
-            <a href="https://www.garanziagiovani.politicheattivecalabria.it/index.html" target="_blank"><img  height="50" style="padding-left: 10px;padding-top: 10px;"title="Visita il sito di Garanzia Giovani Calabria" src="<%=src%>/assets/media/logos/gg.png"></a>
-            <a href="https://ec.europa.eu/info/index_it" target="_blank" ><img  height="50" style="padding-left: 10px;padding-top: 10px;" title="Visita il sito dell'Unione Europea" src="<%=src%>/assets/media/logos/europa.png"></a>
+
+            <a href="#" onclick="return false;">
+                <img  height="50" style="padding-left: 10px;padding-top:
+                                  10px;"title="Fondo per lo Sviluppo e la Coesione"
+                                  src="<%=src%>/assets/media/logos/FSC.jpg"></a>
+            <a href="#" onclick="return false;">
+                <img  height="50" style="padding-left: 10px;padding-top: 10px;" 
+                      title="Unione Europea" 
+                      src="<%=src%>/assets/media/logos/europa.png"></a>
+            <a href="#" onclick="return false;"><img height="50"style="padding-left: 10px;padding-top: 10px;" 
+                                                     title="Regione Calabria" 
+                                                     src="<%=src%>/assets/media/logos/rc.png"></a>
+            <a href="#" onclick="return false;"><img height="50" style="padding-left: 10px;padding-top: 10px;" 
+                                                     title="Ente Nazionale per il Microcredito" 
+                                                     src="<%=src%>/assets/media/logos/enmc.png" ></a>
         </div>
     </div>
     <!-- end:: Header Menu -->
@@ -84,7 +95,7 @@
     <!-- end:: Header Topbar -->
 </div>
 <!-- end:: Header -->
-<link href="<%=src%>/assets/seta/css/jquery.fancybox.css" rel="stylesheet" type="text/css"/>
-<script type="text/javascript" src="<%=src%>/assets/seta/js/jquery-1.10.1.min.js"></script>
-<script type="text/javascript" src="<%=src%>/assets/seta/js/jquery.fancybox.js?v=2.1.5"></script>
-<script type="text/javascript" src="<%=src%>/assets/seta/js/fancy.js"></script>
+<link href="<%=src%>/assets/soop/css/jquery.fancybox.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="<%=src%>/assets/soop/js/jquery-1.10.1.min.js"></script>
+<script type="text/javascript" src="<%=src%>/assets/soop/js/jquery.fancybox.js?v=2.1.5"></script>
+<script type="text/javascript" src="<%=src%>/assets/soop/js/fancy.js"></script>

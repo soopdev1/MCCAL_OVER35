@@ -1,14 +1,14 @@
 
-<%@page import="com.seta.domain.Allievi"%>
+<%@page import="rc.soop.domain.Allievi"%>
 <%@page import="java.util.concurrent.TimeUnit"%>
 <%@page import="java.util.Map"%>
 <%@page import="java.util.HashMap"%>
-<%@page import="com.seta.util.Utility"%>
+<%@page import="rc.soop.util.Utility"%>
 <%@page import="java.time.temporal.ChronoUnit"%>
 <%@page import="java.time.ZoneId"%>
 <%@page import="java.time.LocalDateTime"%>
 <%@page import="java.time.LocalDateTime"%>
-<%@page import="com.seta.domain.DocumentiPrg"%>
+<%@page import="rc.soop.domain.DocumentiPrg"%>
 <%@page import="java.util.Collections"%>
 <%@page import="java.util.ArrayList"%>
 <%@page import="java.util.Comparator"%>
@@ -16,13 +16,13 @@
 <%@page import="java.util.function.Predicate"%>
 <%@page import="java.util.Collection"%>
 <%@page import="java.util.List"%>
-<%@page import="com.seta.domain.StatiPrg"%>
-<%@page import="com.seta.domain.ProgettiFormativi"%>
-<%@page import="com.seta.db.Entity"%>
+<%@page import="rc.soop.domain.StatiPrg"%>
+<%@page import="rc.soop.domain.ProgettiFormativi"%>
+<%@page import="rc.soop.db.Entity"%>
 <%@page import="java.util.Date"%>
 <%@page import="java.text.SimpleDateFormat"%>
-<%@page import="com.seta.domain.User"%>
-<%@page import="com.seta.db.Action"%>
+<%@page import="rc.soop.domain.User"%>
+<%@page import="rc.soop.db.Action"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <%
@@ -497,7 +497,7 @@
         <script src="<%=src%>/assets/demo/default/base/scripts.bundle.js" type="text/javascript"></script>
         <script src="<%=src%>/assets/app/bundle/app.bundle.js" type="text/javascript"></script>
         <script src="<%=src%>/assets/vendors/general/sweetalert2/dist/sweetalert2.js" type="text/javascript"></script>
-        <script src="<%=src%>/assets/seta/js/utility.js" type="text/javascript"></script>
+        <script src="<%=src%>/assets/soop/js/utility.js" type="text/javascript"></script>
 
         <script src="<%=src%>/assets/app/custom/general/crud/forms/widgets/bootstrap-datepicker.js" type="text/javascript"></script>
         <script src="<%=src%>/assets/vendors/general/bootstrap-datepicker/dist/js/bootstrap-datepicker.js" type="text/javascript"></script>

@@ -4,7 +4,7 @@
     Author     : rcosco
 --%>
 
-<%@page import="com.seta.db.Entity"%>
+<%@page import="rc.soop.db.Entity"%>
 <%
     String uri = request.getRequestURI();
     String pageName = uri.substring(uri.lastIndexOf("/") + 1);
@@ -95,8 +95,8 @@
                     <%@include file="general/Cloud.jsp"%>
                     <%@include file="general/Faq.jsp"%>
                     <%@include file="general/Conferenza.jsp"%>
+                    <%if (false) {%>
                     <%@include file="general/Attivita.jsp"%>
-                    <%if (a_cad.equals("1")) {%>
                     <%@include file="general/Cad.jsp"%>
                     <%}%>
                 </ul>

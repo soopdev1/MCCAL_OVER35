@@ -4,19 +4,19 @@
     Author     : rcosco
 --%>
 
-<%@page import="com.seta.util.Utility"%>
+<%@page import="rc.soop.util.Utility"%>
 <%@page import="java.util.ArrayList"%>
 <%@page import="java.util.stream.Collectors"%>
 <%@page import="java.util.Date"%>
 <%@page import="java.text.SimpleDateFormat"%>
-<%@page import="com.seta.domain.DocumentiPrg"%>
-<%@page import="com.seta.domain.Docenti"%>
-<%@page import="com.seta.domain.Allievi"%>
+<%@page import="rc.soop.domain.DocumentiPrg"%>
+<%@page import="rc.soop.domain.Docenti"%>
+<%@page import="rc.soop.domain.Allievi"%>
 <%@page import="java.util.List"%>
-<%@page import="com.seta.domain.ProgettiFormativi"%>
-<%@page import="com.seta.db.Entity"%>
-<%@page import="com.seta.db.Action"%>
-<%@page import="com.seta.domain.User"%>
+<%@page import="rc.soop.domain.ProgettiFormativi"%>
+<%@page import="rc.soop.db.Entity"%>
+<%@page import="rc.soop.db.Action"%>
+<%@page import="rc.soop.domain.User"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <%
     User us = (User) session.getAttribute("user");
@@ -366,7 +366,7 @@
         <script src="<%=src%>/assets/vendors/general/jquery-validation/dist/additional-methods.js" type="text/javascript"></script>
         <script src="<%=src%>/assets/app/custom/general/components/extended/blockui1.33.js" type="text/javascript"></script>
         <script src="<%=src%>/assets/vendors/general/sweetalert2/dist/sweetalert2.js" type="text/javascript"></script>
-        <script src="<%=src%>/assets/seta/js/utility.js" type="text/javascript"></script>
+        <script src="<%=src%>/assets/soop/js/utility.js" type="text/javascript"></script>
         <script src="<%=src%>/assets/app/bundle/app.bundle.js" type="text/javascript"></script>
         <!--this page-->
         <script src="<%=src%>/assets/vendors/general/inputmask/dist/inputmask/inputmask.js" type="text/javascript"></script>

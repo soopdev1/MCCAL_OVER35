@@ -5,21 +5,21 @@
 --%>
 
 
-<%@page import="com.seta.util.Utility"%>
+<%@page import="rc.soop.util.Utility"%>
 <%@page import="java.util.Date"%>
 <%@page import="java.util.ArrayList"%>
 <%@page import="java.util.stream.Collectors"%>
 <%@page import="org.apache.commons.lang3.StringEscapeUtils"%>
-<%@page import="com.seta.domain.Documenti_Allievi"%>
-<%@page import="com.seta.domain.TipoDoc_Allievi"%>
-<%@page import="com.seta.domain.Allievi"%>
+<%@page import="rc.soop.domain.Documenti_Allievi"%>
+<%@page import="rc.soop.domain.TipoDoc_Allievi"%>
+<%@page import="rc.soop.domain.Allievi"%>
 <%@page import="java.text.SimpleDateFormat"%>
 <%@page import="java.util.List"%>
-<%@page import="com.seta.domain.StatiPrg"%>
-<%@page import="com.seta.domain.ProgettiFormativi"%>
-<%@page import="com.seta.db.Entity"%>
-<%@page import="com.seta.db.Action"%>
-<%@page import="com.seta.domain.User"%>
+<%@page import="rc.soop.domain.StatiPrg"%>
+<%@page import="rc.soop.domain.ProgettiFormativi"%>
+<%@page import="rc.soop.db.Entity"%>
+<%@page import="rc.soop.db.Action"%>
+<%@page import="rc.soop.domain.User"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <%
     User us = (User) session.getAttribute("user");
@@ -248,7 +248,7 @@
         <script src="<%=src%>/assets/vendors/general/jquery-validation/dist/additional-methods.js" type="text/javascript"></script>
         <script src="<%=src%>/assets/app/custom/general/components/extended/blockui1.33.js" type="text/javascript"></script>
         <script src="<%=src%>/assets/vendors/general/sweetalert2/dist/sweetalert2.js" type="text/javascript"></script>
-        <script src="<%=src%>/assets/seta/js/utility.js" type="text/javascript"></script>
+        <script src="<%=src%>/assets/soop/js/utility.js" type="text/javascript"></script>
         <script src="<%=src%>/assets/app/bundle/app.bundle.js" type="text/javascript"></script>
 
         <!--this page-->

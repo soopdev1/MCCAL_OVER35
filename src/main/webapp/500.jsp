@@ -3,7 +3,7 @@
     Created on : 15-ott-2019, 10.42.32
     Author     : rcosco
 --%>
-<%@page import="com.seta.util.Utility"%>
+<%@page import="rc.soop.util.Utility"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <%
     String src = session.getAttribute("src") == null ? "" : session.getAttribute("src").toString() + "/";

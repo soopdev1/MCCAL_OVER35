@@ -4,21 +4,21 @@
     Author     : rcosco
 --%>
 
-<%@page import="com.seta.entity.FadCalendar"%>
+<%@page import="rc.soop.entity.FadCalendar"%>
 <%@page import="java.util.Date"%>
-<%@page import="com.seta.util.Utility"%>
+<%@page import="rc.soop.util.Utility"%>
 <%@page import="org.apache.commons.lang3.StringEscapeUtils"%>
 <%@page import="java.util.stream.Collectors"%>
 <%@page import="java.util.ArrayList"%>
 <%@page import="java.text.SimpleDateFormat"%>
-<%@page import="com.seta.domain.DocumentiPrg"%>
-<%@page import="com.seta.domain.TipoDoc"%>
+<%@page import="rc.soop.domain.DocumentiPrg"%>
+<%@page import="rc.soop.domain.TipoDoc"%>
 <%@page import="java.util.List"%>
-<%@page import="com.seta.domain.StatiPrg"%>
-<%@page import="com.seta.domain.ProgettiFormativi"%>
-<%@page import="com.seta.db.Entity"%>
-<%@page import="com.seta.db.Action"%>
-<%@page import="com.seta.domain.User"%>
+<%@page import="rc.soop.domain.StatiPrg"%>
+<%@page import="rc.soop.domain.ProgettiFormativi"%>
+<%@page import="rc.soop.db.Entity"%>
+<%@page import="rc.soop.db.Action"%>
+<%@page import="rc.soop.domain.User"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <%
     User us = (User) session.getAttribute("user");
@@ -68,10 +68,10 @@
         <link href="<%=src%>/assets/vendors/general/bootstrap-datepicker/dist/css/bootstrap-datepicker3.css" rel="stylesheet" type="text/css" />
         <link href="<%=src%>/assets/vendors/general/bootstrap-timepicker/css/bootstrap-timepicker.css" rel="stylesheet" type="text/css" />
         <!--fancy-->
-        <link href="<%=src%>/assets/seta/css/jquery.fancybox.css" rel="stylesheet" type="text/css"/>
-        <script type="text/javascript" src="<%=src%>/assets/seta/js/jquery-1.10.1.min.js"></script>
-        <script type="text/javascript" src="<%=src%>/assets/seta/js/jquery.fancybox.js?v=2.1.5"></script>
-        <script type="text/javascript" src="<%=src%>/assets/seta/js/fancy.js"></script>
+        <link href="<%=src%>/assets/soop/css/jquery.fancybox.css" rel="stylesheet" type="text/css"/>
+        <script type="text/javascript" src="<%=src%>/assets/soop/js/jquery-1.10.1.min.js"></script>
+        <script type="text/javascript" src="<%=src%>/assets/soop/js/jquery.fancybox.js?v=2.1.5"></script>
+        <script type="text/javascript" src="<%=src%>/assets/soop/js/fancy.js"></script>
     </head>
     <body class="kt-header--fixed kt-header-mobile--fixed kt-subheader--fixed kt-subheader--enabled kt-subheader--solid kt-aside--enabled kt-aside--fixed">
 
@@ -265,7 +265,7 @@
         <script src="<%=src%>/assets/vendors/general/jquery-validation/dist/additional-methods.js" type="text/javascript"></script>
         <script src="<%=src%>/assets/app/custom/general/components/extended/blockui1.33.js" type="text/javascript"></script>
         <script src="<%=src%>/assets/vendors/general/sweetalert2/dist/sweetalert2.js" type="text/javascript"></script>
-        <script src="<%=src%>/assets/seta/js/utility.js" type="text/javascript"></script>
+        <script src="<%=src%>/assets/soop/js/utility.js" type="text/javascript"></script>
         <script src="<%=src%>/assets/app/bundle/app.bundle.js" type="text/javascript"></script>
         <!--this page-->
         <script src="<%=src%>/assets/app/custom/general/crud/forms/widgets/bootstrap-datepicker.js" type="text/javascript"></script>

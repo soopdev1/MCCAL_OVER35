@@ -1,4 +1,4 @@
-<%@page import="com.seta.util.Utility"%>
+<%@page import="rc.soop.util.Utility"%>
 <div class="kt-footer kt-grid__item kt-grid kt-grid--desktop kt-grid--ver-desktop" style="align-items:center; padding: 15px;">
     <div class="kt-footer__copyright">
         <%=Utility.titlepro%> v1.0

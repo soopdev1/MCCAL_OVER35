@@ -4,7 +4,7 @@
     Author     : rcosco
 --%>
 
-<%@page import="com.seta.db.Entity"%>
+<%@page import="rc.soop.db.Entity"%>
 <%
     String uri = request.getRequestURI();
     String pageName = uri.substring(uri.lastIndexOf("/") + 1);

@@ -3,8 +3,8 @@
     Created on : 15-ott-2019, 10.42.32
     Author     : rcosco
 --%>
-<%@page import="com.seta.db.Entity"%>
-<%@page import="com.seta.util.Utility"%>
+<%@page import="rc.soop.db.Entity"%>
+<%@page import="rc.soop.util.Utility"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <html>
     <%  Entity e = new Entity();
@@ -74,7 +74,7 @@
                             </div>
                             <div class="kt-login__signin">
                                 <div class="kt-login__head">
-                                    <h3 class="kt-login__title kt-font-io" style="font-size:2rem"><b>YES I START UP</b><br>Calabria</h3>
+                                    <h3 class="kt-login__title kt-font-io" style="font-size:2rem"><b>YES I START UP</b><br>Calabria<br><b>OVER 35</b></h3>
                                     <div class="kt-login__title">Accedi</div>
                                 </div>
                                 <form action="Login?type=login" id="kt-form" class="kt-form" onsubmit="return ctrlForm();" accept-charset="ISO-8859-1" method="post">
@@ -143,10 +143,10 @@
         </div>
 
         <!-- end:: Page -->
-        <script type="text/javascript" src="assets/seta/js/jquery-1.10.1.min.js"></script>
-        <script type="text/javascript" src="assets/seta/js/jquery.fancybox.js?v=2.1.5"></script>
+        <script type="text/javascript" src="assets/soop/js/jquery-1.10.1.min.js"></script>
+        <script type="text/javascript" src="assets/soop/js/jquery.fancybox.js?v=2.1.5"></script>
         <!--begin:: Global Mandatory Vendors -->
-        <script src="assets/seta/js/utility.js" type="text/javascript"></script>
+        <script src="assets/soop/js/utility.js" type="text/javascript"></script>
         <script>
                                     function ctrlForm() {
                                         var err = false;
@@ -195,7 +195,7 @@
         </script>
 
 
-        <script type="text/javascript" src="assets/seta/js/fancy.js"></script>
+        <script type="text/javascript" src="assets/soop/js/fancy.js"></script>
         <script src="assets/vendors/general/jquery/dist/jquery.js" type="text/javascript"></script>
         <script src="assets/vendors/general/popper.js/dist/umd/popper.js" type="text/javascript"></script>
         <script src="assets/vendors/general/bootstrap/dist/js/bootstrap.min.js" type="text/javascript"></script>

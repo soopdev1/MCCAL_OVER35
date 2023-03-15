@@ -1,10 +1,10 @@
-<%@page import="com.seta.domain.TipoFaq"%>
-<%@page import="com.seta.domain.StatiPrg"%>
-<%@page import="com.seta.db.Entity"%>
+<%@page import="rc.soop.domain.TipoFaq"%>
+<%@page import="rc.soop.domain.StatiPrg"%>
+<%@page import="rc.soop.db.Entity"%>
 <%@page import="java.util.List"%>
-<%@page import="com.seta.domain.SoggettiAttuatori"%>
-<%@page import="com.seta.domain.User"%>
-<%@page import="com.seta.db.Action"%>
+<%@page import="rc.soop.domain.SoggettiAttuatori"%>
+<%@page import="rc.soop.domain.User"%>
+<%@page import="rc.soop.db.Action"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <%
@@ -214,10 +214,10 @@
         <script src="<%=src%>/assets/demo/default/base/scripts.bundle.js" type="text/javascript"></script>
         <script src="<%=src%>/assets/app/bundle/app.bundle.js" type="text/javascript"></script>
         <script src="<%=src%>/assets/vendors/general/sweetalert2/dist/sweetalert2.js" type="text/javascript"></script>
-        <script src="<%=src%>/assets/seta/js/utility.js<%=no_cache%>" type="text/javascript"></script>
+        <script src="<%=src%>/assets/soop/js/utility.js<%=no_cache%>" type="text/javascript"></script>
         <!--this page -->
         <script src="<%=src%>/assets/vendors/custom/datatables/datatables.bundle.js" type="text/javascript"></script>
-        <script src="<%=src%>/assets/seta/js/loadTable.js" type="text/javascript"></script>
+        <script src="<%=src%>/assets/soop/js/loadTable.js" type="text/javascript"></script>
         <script src="<%=src%>/resource/PerfectScroolbar/perfect-scrollbar.js" type="text/javascript"></script>
         <script id="mangeFAQ" src="<%=src%>/page/mc/js/mangeFAD_Converence.js<%=no_cache%>" data-context="<%=request.getContextPath()%>" type="text/javascript"></script>
         <script type="text/javascript">

@@ -3,14 +3,14 @@
     Created on : 18-set-2019, 12.31.26
     Author     : rcosco
 --%>
-<%@page import="com.seta.util.Utility"%>
+<%@page import="rc.soop.util.Utility"%>
 <%@page import="java.util.List"%>
-<%@page import="com.seta.domain.Storico_ModificheInfo"%>
-<%@page import="com.seta.db.Action"%>
-<%@page import="com.seta.domain.SoggettiAttuatori"%>
+<%@page import="rc.soop.domain.Storico_ModificheInfo"%>
+<%@page import="rc.soop.db.Action"%>
+<%@page import="rc.soop.domain.SoggettiAttuatori"%>
 <%@page import="java.text.SimpleDateFormat"%>
-<%@page import="com.seta.db.Entity"%>
-<%@page import="com.seta.domain.User"%>
+<%@page import="rc.soop.db.Entity"%>
+<%@page import="rc.soop.domain.User"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <%
     User us = (User) session.getAttribute("user");
@@ -345,11 +345,11 @@ td { font-size: 12px; }
         <script src="<%=src%>/assets/vendors/custom/components/vendors/jquery-validation/init.js" type="text/javascript"></script>
         <script src="<%=src%>/assets/app/custom/general/components/extended/blockui1.33.js" type="text/javascript"></script>
         <script src="<%=src%>/assets/vendors/general/sweetalert2/dist/sweetalert2.js" type="text/javascript"></script>
-        <script src="<%=src%>/assets/seta/js/utility.js" type="text/javascript"></script>
+        <script src="<%=src%>/assets/soop/js/utility.js" type="text/javascript"></script>
         <script src="<%=src%>/assets/app/bundle/app.bundle.js" type="text/javascript"></script>
 
         <script src="<%=src%>/assets/vendors/custom/datatables/datatables.bundle.js" type="text/javascript"></script>
-        <script src="<%=src%>/assets/seta/js/loadTable.js" type="text/javascript"></script>
+        <script src="<%=src%>/assets/soop/js/loadTable.js" type="text/javascript"></script>
         <script>
                                                                             var KTAppOptions = {
                                                                                 "colors": {

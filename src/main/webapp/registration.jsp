@@ -3,10 +3,10 @@
     Created on : 15-ott-2019, 10.42.32
     Author     : rcosco
 --%>
-<%@page import="com.seta.util.Utility"%>
+<%@page import="rc.soop.util.Utility"%>
 <%@page import="java.util.List"%>
-<%@page import="com.seta.db.Entity"%>
-<%@page import="com.seta.entity.Item"%>
+<%@page import="rc.soop.db.Entity"%>
+<%@page import="rc.soop.entity.Item"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <%
     Entity e = new Entity();
@@ -287,7 +287,7 @@
         <script src="assets/demo/default/base/scripts.bundle.js" type="text/javascript"></script>
         <script src="assets/app/bundle/app.bundle.js" type="text/javascript"></script>
         <script src="assets/app/custom/general/components/extended/blockui1.33.js" type="text/javascript"></script>
-        <script src="assets/seta/js/utility.js" type="text/javascript"></script>
+        <script src="assets/soop/js/utility.js" type="text/javascript"></script>
         <script src="assets/app/custom/general/components/extended/blockui1.33.js" type="text/javascript"></script>
         <!-- this page -->
         <script src="assets/vendors/custom/vendors/bootstrap-multiselectsplitter/bootstrap-multiselectsplitter.min.js" type="text/javascript"></script>

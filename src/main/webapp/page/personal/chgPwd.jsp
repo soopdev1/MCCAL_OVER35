@@ -4,8 +4,8 @@
     Author     : rcosco
 --%>
 
-<%@page import="com.seta.util.Utility"%>
-<%@page import="com.seta.domain.User"%>
+<%@page import="rc.soop.util.Utility"%>
+<%@page import="rc.soop.domain.User"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <%
     User us = (User) session.getAttribute("user");
@@ -202,7 +202,7 @@
         <script src="<%=src%>/assets/vendors/custom/components/vendors/jquery-validation/init.js" type="text/javascript"></script>
         <script src="<%=src%>/assets/app/custom/general/components/extended/blockui1.33.js" type="text/javascript"></script>
         <script src="<%=src%>/assets/vendors/general/sweetalert2/dist/sweetalert2.js" type="text/javascript"></script>
-        <script src="<%=src%>/assets/seta/js/utility.js" type="text/javascript"></script>
+        <script src="<%=src%>/assets/soop/js/utility.js" type="text/javascript"></script>
         <script src="<%=src%>/assets/app/bundle/app.bundle.js" type="text/javascript"></script>
         <!--DATERANGEPICKER -->
         <script type="text/javascript">

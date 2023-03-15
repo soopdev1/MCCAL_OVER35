@@ -3,19 +3,19 @@
     Created on : 18-set-2019, 12.31.26
     Author     : rcosco
 --%>
-<%@page import="com.seta.domain.Condizione_Lavorativa"%>
-<%@page import="com.seta.domain.StatiPrg"%>
-<%@page import="com.seta.domain.TipoDoc_Allievi"%>
-<%@page import="com.seta.domain.Condizione_Mercato"%>
-<%@page import="com.seta.domain.Comuni"%>
-<%@page import="com.seta.domain.CPI"%>
-<%@page import="com.seta.db.Action"%>
-<%@page import="com.seta.domain.TitoliStudio"%>
+<%@page import="rc.soop.domain.Condizione_Lavorativa"%>
+<%@page import="rc.soop.domain.StatiPrg"%>
+<%@page import="rc.soop.domain.TipoDoc_Allievi"%>
+<%@page import="rc.soop.domain.Condizione_Mercato"%>
+<%@page import="rc.soop.domain.Comuni"%>
+<%@page import="rc.soop.domain.CPI"%>
+<%@page import="rc.soop.db.Action"%>
+<%@page import="rc.soop.domain.TitoliStudio"%>
 <%@page import="java.text.SimpleDateFormat"%>
 <%@page import="java.util.List"%>
-<%@page import="com.seta.db.Entity"%>
-<%@page import="com.seta.entity.Item"%>
-<%@page import="com.seta.domain.User"%>
+<%@page import="rc.soop.db.Entity"%>
+<%@page import="rc.soop.entity.Item"%>
+<%@page import="rc.soop.domain.User"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <%
     User us = (User) session.getAttribute("user");
@@ -435,7 +435,7 @@
         <script src="<%=src%>/assets/vendors/general/jquery-form/dist/jquery.form.min.js" type="text/javascript"></script>
         <script src="<%=src%>/assets/app/custom/general/components/extended/blockui1.33.js" type="text/javascript"></script>
         <script src="<%=src%>/assets/vendors/general/sweetalert2/dist/sweetalert2.js" type="text/javascript"></script>
-        <script src="<%=src%>/assets/seta/js/utility.js" type="text/javascript"></script>
+        <script src="<%=src%>/assets/soop/js/utility.js" type="text/javascript"></script>
         <script src="<%=src%>/assets/app/bundle/app.bundle.js" type="text/javascript"></script>
         <!--this page -->
         <script src="<%=src%>/assets/vendors/general/select2/dist/js/select2.full.js" type="text/javascript"></script>

@@ -3,10 +3,10 @@
     Created on : 2-mar-2020, 12.41.15
     Author     : rcosco
 --%>
-<%@page import="com.seta.db.Action"%>
-<%@page import="com.seta.domain.Cloud"%>
+<%@page import="rc.soop.db.Action"%>
+<%@page import="rc.soop.domain.Cloud"%>
 <%@page import="java.util.List"%>
-<%@page import="com.seta.db.Entity"%>
+<%@page import="rc.soop.db.Entity"%>
 <% Entity e = new Entity();
     List<Cloud> clouds = e.findAll(Cloud.class);
     e.close();

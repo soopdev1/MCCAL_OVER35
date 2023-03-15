@@ -1,7 +1,7 @@
-<%@page import="com.seta.util.Utility"%>
-<%@page import="com.seta.db.Entity"%>
-<%@page import="com.seta.domain.User"%>
-<%@page import="com.seta.db.Action"%>
+<%@page import="rc.soop.util.Utility"%>
+<%@page import="rc.soop.db.Entity"%>
+<%@page import="rc.soop.domain.User"%>
+<%@page import="rc.soop.db.Action"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <%
@@ -107,7 +107,7 @@
             <script src="<%=src%>/assets/demo/default/base/scripts.bundle.js" type="text/javascript"></script>
             <script src="<%=src%>/assets/vendors/general/sweetalert2/dist/sweetalert2.js" type="text/javascript"></script>
             <script src="<%=src%>/assets/app/bundle/app.bundle.js" type="text/javascript"></script>
-            <script src="<%=src%>/assets/seta/js/utility.js" type="text/javascript"></script>
+            <script src="<%=src%>/assets/soop/js/utility.js" type="text/javascript"></script>
             <script type="text/javascript">
         var KTAppOptions = {
             "colors": {
