@@ -636,7 +636,7 @@ function valitdatePrg(id, stato, misto) {
                     + "<input class='form-control obbligatory' id='new_cip' placeholder='CIP'>"
                     + "</div><div class='dropdown-divider'></div><div class='form-group' id='swal_cip_misto'>"
                     + "<label>Inserisci Codice Identificativo Percorso (CIP) del progetto collegato</label>"
-                    + "<input class='form-control obbligatory' id='new_cip_misto' placeholder='CIP Progetto Professioni'>"
+                    + "<input class='form-control obbligatory' id='new_cip_misto' placeholder='CIP Altro Progetto'>"
                     + "</div>";
         } else {
             html = "<div class='form-group' id='swal_cip'>"

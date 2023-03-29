@@ -4,6 +4,7 @@
     Author     : rcosco
 --%>
 
+<%@page import="rc.soop.util.Utility"%>
 <%@page import="java.util.Date"%>
 <%@page import="java.text.SimpleDateFormat"%>
 <%@page import="rc.soop.domain.DocumentiPrg"%>

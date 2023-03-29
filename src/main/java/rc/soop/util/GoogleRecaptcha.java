@@ -57,7 +57,6 @@ public class GoogleRecaptcha {
             in.close();
             JSONObject json = new JSONObject(response.toString());
 
-//            System.out.println("it.refill.util.GoogleRecaptcha.isValid() "+json.toString());
             Boolean success = (Boolean) json.get("success");
             BigDecimal score = (BigDecimal) json.get("score");
 

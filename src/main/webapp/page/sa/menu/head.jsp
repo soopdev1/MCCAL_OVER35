@@ -6,21 +6,9 @@
     <button class="kt-header-menu-wrapper-close" id="kt_header_menu_mobile_close_btn"><i class="la la-close"></i></button>
     <div class="kt-header-menu-wrapper " id="kt_header_menu_wrapper">
         <div style="display: inline-block;  vertical-align: middle;  line-height: normal;"> 
-
             <a href="#" onclick="return false;">
-                <img  height="50" style="padding-left: 10px;padding-top:
-                                  10px;"title="Fondo per lo Sviluppo e la Coesione"
-                                  src="<%=src%>/assets/media/logos/FSC.jpg"></a>
-            <a href="#" onclick="return false;">
-                <img  height="50" style="padding-left: 10px;padding-top: 10px;" 
-                      title="Unione Europea" 
-                      src="<%=src%>/assets/media/logos/europa.png"></a>
-            <a href="#" onclick="return false;"><img height="50"style="padding-left: 10px;padding-top: 10px;" 
-                                                     title="Regione Calabria" 
-                                                     src="<%=src%>/assets/media/logos/rc.png"></a>
-            <a href="#" onclick="return false;"><img height="50" style="padding-left: 10px;padding-top: 10px;" 
-                                                     title="Ente Nazionale per il Microcredito" 
-                                                     src="<%=src%>/assets/media/logos/enmc.png" ></a>
+                <img  height="75" style="padding-left: 10px;padding-top:10px;"title="" src="<%=src%>/assets/media/logos/Loghi_over35_v1.jpg">
+            </a>
         </div>
     </div>
     <!-- end:: Header Menu -->
