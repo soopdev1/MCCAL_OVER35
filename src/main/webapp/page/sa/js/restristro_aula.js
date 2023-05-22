@@ -5,8 +5,6 @@
  */
 var context = document.getElementById("restristro_aula").getAttribute("data-context");
 
-var offset = moment().utcOffset() * 60 * 1000;
-
 var millis_start = 0, millis_end = 0, millis_day = 0, millis_my_end = 0, millis_my_start = 0;//vengono settati nella pagina UploadRegistroAula_new.jsp
 
 var start, end;
@@ -31,8 +29,8 @@ function setDay() {
         my_start = start;
         my_end = end;
     } else {
-        my_start = new Date(millis_day + millis_my_start + offset);
-        my_end = new Date(millis_day + millis_my_end + offset);
+        my_start = new Date(millis_day + millis_my_start);
+        my_end = new Date(millis_day + millis_my_end);
     }
 }
 
@@ -57,7 +55,7 @@ function genetateTime() {
             firstDay: 1,
             format: 'HH:mm',
             daysOfWeek: days,
-            monthNames: months,
+            monthNames: months
         }
     }, function (start, end, label) {
         min_time = start.format('HH:mm');
@@ -89,7 +87,7 @@ function cssDatePicker() {
 
 $('#range2').change(function (e) {
     var date = $(e.target).val();
-    if (date != "") {
+    if (date !== "") {
         $('input.time-a.in').val(min_time);
         $('input.time-a.out').val(max_time);
         initTimeAllievi();
@@ -108,7 +106,7 @@ $('#allievi').on("change", function () {
 });
 
 $('#allievi').select2({//setta placeholder nella multiselect
-    placeholder: "Seleziona Allievi",
+    placeholder: "Seleziona Allievi"
 });
 
 function ingressiAllevi() {
@@ -141,7 +139,7 @@ function ingressiAllevi() {
                         .replace("@nome", $("#allievi option[value='" + a + "']").text()));
             }
         });
-        if (min_time != "" && max_time != "") {
+        if (min_time !== "" && max_time !== "") {
             initTimeAllievi();
             $('input.time-a').removeAttr("disabled");
             $('input.time-a').removeClass("disable-input");
@@ -196,7 +194,6 @@ var ore, ore_max, ore_max_tot, ore_attuali;
 
 function ctrlForm() {
     var err = false;
-//                err = !checkRequiredFile() ? true : err;
     err = checkObblFields() ? true : err;
     err = controlTotHour() ? true : err;
     return !err;
@@ -222,7 +219,7 @@ function controlTotHour() {
 }
 
 function calculateHour() {
-    if ($('#range2').val() != '') {
+    if ($('#range2').val() !== '') {
         var range = $('#range2').val().split("-");
         var h1 = range[0].trim().split(":");
         var h2 = range[1].trim().split(":");
@@ -248,7 +245,7 @@ function getRegisters(giorno) {
         },
         error: {
             //gestisci errore
-        },
+        }
     });
     return registri;
 }

@@ -1,10 +1,8 @@
 
-import rc.soop.db.Entity;
-import rc.soop.domain.ProgettiFormativi;
-import static rc.soop.util.MakeTarGz.createTarArchive;
-import java.io.ByteArrayOutputStream;
-import java.util.ArrayList;
-import java.util.List;
+import org.joda.time.DateTime;
+import org.joda.time.DateTimeZone;
+import org.joda.time.format.DateTimeFormat;
+import org.joda.time.format.DateTimeFormatter;
 
 /**
  *
@@ -13,16 +11,28 @@ import java.util.List;
 public class NewClass {
 
     public static void main(String[] args) {
-        
-        Entity e = new Entity();
-        ProgettiFormativi p = e.getEm().find(ProgettiFormativi.class, 122L);
-        e.close();
+//        rc.soop.servlet.OperazioniSA.uploadRegistrioAula(a) 14:00
+//rc.soop.servlet.OperazioniSA.uploadRegistrioAula(a) 46800000
+//rc.soop.servlet.OperazioniSA.uploadRegistrioAula(a) 19:00
+//rc.soop.servlet.OperazioniSA.uploadRegistrioAula(a) 64800000
+        String or = "2023-01-01 00:00";
+        String hh1 = "2023-01-01 14:00";
+        String hh2 = "2023-01-01 19:00";
 
-        List<ProgettiFormativi> prgs = new ArrayList<>();
-        prgs.add(p);
+        DateTimeFormatter dtf = DateTimeFormat.forPattern("yyyy-MM-dd HH:mm");
 
-        ByteArrayOutputStream out = createTarArchive(prgs);
-        
+        System.out.println(dtf.parseDateTime(hh1).toDateTime().getMillis() - dtf.parseDateTime(or).toDateTime().getMillis());
+        System.out.println(dtf.parseDateTime(hh2).toDateTime().getMillis() - dtf.parseDateTime(or).toDateTime().getMillis());
+
+//        Entity e = new Entity();
+//        ProgettiFormativi p = e.getEm().find(ProgettiFormativi.class, 122L);
+//        e.close();
+//
+//        List<ProgettiFormativi> prgs = new ArrayList<>();
+//        prgs.add(p);
+//
+//        ByteArrayOutputStream out = createTarArchive(prgs);
+//        
 ////        compileTabella1(56L);
 //        Database db1 = new Database();
 //        String base64or = db1.getBase64Report(38);

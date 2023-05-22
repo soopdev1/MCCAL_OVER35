@@ -223,7 +223,7 @@
                 var arrows = {
                     leftArrow: '<i class="la la-angle-left"></i>',
                     rightArrow: '<i class="la la-angle-right"></i>'
-                }
+                };
                 $('#giorno').datepicker({
                     orientation: "bottom left",
                     todayHighlight: true,
@@ -231,7 +231,7 @@
                     autoclose: true,
                     format: 'dd/mm/yyyy',
                     endDate: new Date(),
-                    startDate: new Date(<%=p.getStart().getTime()%>),
+                    startDate: new Date(<%=p.getStart().getTime()%>)
                 });
             }();
 
@@ -239,25 +239,24 @@
 
 
             $('#giorno').change(function (e) {
-                if ($(this).val() != "") {
+                if ($(this).val() !== "") {
                     startBlockUILoad($(this));
                     var registri = getRegisters($(this).val());
-                    stopBlockUI($(this))
-                    if (registri.length == 0) {
+                    stopBlockUI($(this));
+                    if (registri.length === 0) {
                         ore = 0;
                         millis_start = 0;
                         millis_end = 0;
                         millis_day = 0;
-                        ableTime($(this).val(), 0)
-                    } else if (registri.length == 1) {
+                        ableTime($(this).val(), 0);
+                    } else if (registri.length === 1) {
                         ore = registri[0].ore;
-                        console.log(ore)
                         millis_start = registri[0].orarioend;
                         millis_day = registri[0].giorno;
                         millis_end = 0;
 
                         if (ore < ore_max) {
-                            ableTime($(this).val(), ore)
+                            ableTime($(this).val(), ore);
                         } else {
                             fastSwalElementResponsive("<h3>Per questo giorno sono state erogate tutte le possibili ore</h3>", "Chiudi");
                         }

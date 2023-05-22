@@ -489,7 +489,7 @@ public class OperazioniSA extends HttpServlet {
             p.setStato(e.getEm().find(StatiPrg.class, "S1"));
             p.setControllable(1);
             p.setData_up(new Date());
-            
+
             boolean misto = false;
             try {
                 if (request.getParameter("misto").equalsIgnoreCase("SI")) {
@@ -560,10 +560,10 @@ public class OperazioniSA extends HttpServlet {
             e.merge(p);
             e.persist(new Storico_Prg("Creato", new Date(), p, p.getStato()));//storico progetto
             e.commit();
-            
+
             //INVIO MAIL
             SendMailJet.notifica_Controllo_MC(e, p);
-            
+
             resp.addProperty("result", true);
         } catch (PersistenceException | ParseException ex) {
             e.rollBack();
@@ -916,12 +916,10 @@ public class OperazioniSA extends HttpServlet {
                 }
                 e.merge(p);
                 e.commit();
-                
-                
+
                 //INVIO MAIL
                 SendMailJet.notifica_Controllo_MC(e, p);
-                
-                
+
                 resp.addProperty("result", true);
             } else {
                 resp.addProperty("result", false);
@@ -1372,7 +1370,7 @@ public class OperazioniSA extends HttpServlet {
     }
 
     protected void uploadRegistrioAula(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        
+
 //        dsadsdsa
 //        
         Entity e = new Entity();
@@ -1545,7 +1543,7 @@ public class OperazioniSA extends HttpServlet {
             e.commit();
             resp.addProperty("result", true);
         } catch (Exception ex) {
-            e.insertTracking(String.valueOf(((User) request.getSession().getAttribute("user")).getId()), 
+            e.insertTracking(String.valueOf(((User) request.getSession().getAttribute("user")).getId()),
                     "OperazioniSA modifyRegistrioAula: " + estraiEccezione(ex));
             resp.addProperty("result", false);
             resp.addProperty("message", "Errore: non &egrave; stato possibile modificare il registro.");

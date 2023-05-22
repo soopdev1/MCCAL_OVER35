@@ -56,7 +56,7 @@ function defaultValue(element, select) {
 }
 function checkValue(element, select) {
     if (!select) {
-        if (element.val() == "") {
+        if (element.val() === "") {
             element.attr("class", "form-control is-invalid");
             return true;
         } else {
@@ -996,7 +996,7 @@ function checktime(hour, min, max) {
 Date.prototype.addHours = function (h) {
     this.setHours(this.getHours() + h);
     return this;
-}
+};
 
 function getMaxHour(h1, h2) {
     if (new Date('00', '00', '00', h1.split(':')[0], h1.split(':')[1]) < new Date('00', '00', '00', h2.split(':')[0], h2.split(':')[1])) {
@@ -1057,7 +1057,7 @@ function formattedTime(s) {
 function calculateHoursRegistro(s1_start, s1_end, s2_start, s2_end) {
 //    var utc = (+1.00 * 60) * 60 * 1000; //TIMEZONE +1
     var hours = s1_end - s1_start;
-    if (s2_start != null || s2_end != null) {
+    if (s2_start !== null || s2_end !== null) {
         hours += (s2_end - s2_start);
     }
 //    hours += utc;

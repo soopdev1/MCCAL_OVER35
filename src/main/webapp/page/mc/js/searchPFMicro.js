@@ -99,21 +99,21 @@ var KTDatatablesDataSourceAjaxServer = function () {
                             option += '<a class="dropdown-item fancyBoxAntoRef" href="checkList2.jsp?id=' + row.id + '" ><i class="fa fa-file-excel"></i> Compila Checklist 2</a>';
                             option += '<a class="dropdown-item fancyBoxAntoRef" href="uploadCL.jsp?id=' + row.id + '" ><i class="fa fa-file-upload"></i> Modifica/Carica Checklist</a>';
                         }
-                        
+
                         if (row.stato.id === "FA") {
                             option += '<a class="dropdown-item fancyBoxAntoRef" href="uploadCL.jsp?id=' + row.id + '" ><i class="fa fa-file-upload"></i> Modifica/Carica Documenti</a>';
                         }
-                        
+
                         if (row.stato.controllare === 1) {
                             option += '<a class="dropdown-item kt-font-success" href="javascript:void(0);" onclick="valitdatePrg(' + row.id
                                     + ',&quot;' + row.stato.id + '&quot;,&quot;' + row.misto + '&quot;)"><i class="fa fa-check kt-font-success" style="margin-top:-2px"></i>Convalida Progetto</a>';
                             option += '<a class="dropdown-item kt-font-danger" href="javascript:void(0);" onclick="rejectPrg(' + row.id + ')"><i class="flaticon2-delete kt-font-danger" style="margin-top:-2px"></i>Segnala Progetto</a>';
                         }
-                        
+
                         if (row.archiviabile === 1) {
                             option += '<a class="dropdown-item kt-font-success" href="javascript:void(0);" onclick="confirmNext(' + row.id + ',\'' + row.stato.id + '\')">Archivia Progetto&nbsp;<i class="fa fa-angle-double-right kt-font-success" style="margin-top:-2px"></i></a>';
                         }
-                        
+
                         if (row.stato.id === "AR") {
                             option += '<a class="dropdown-item" href="javascript:void(0);" onclick="downloadArchive(' + row.id + ',\'' + row.cip + '\')"><i class="fa fa-file-archive" style="margin-top:-2px"></i> Scarica Pacchetto Files</a>';
                             if (row.rendicontato === 0) {
@@ -498,26 +498,30 @@ function swalDocumentAllievo(idallievo) {
 function showRegistro(idregistro, controllare) {
     var registro = registri.get(idregistro);
     var doc_registro = "";
-    var totalhh = calculateHoursRegistro(registro.orariostart_mattina, registro.orarioend_mattina, registro.orariostart_pom, registro.orarioend_pom).replace(":0", ":00");
+    var totalhh = calculateHoursRegistro(registro.orariostart_mattina, registro.orarioend_mattina, registro.orariostart_pom, registro.orarioend_pom);
     totalhh = totalhh.indexOf(":") === 1 ? "0" + totalhh : totalhh;
-
+    if (totalhh.endsWith(':0')) {
+        totalhh += "0";
+    }
     if (registro.orariostart_pom !== null) {
         doc_registro += getHtml("doc_registro_individiale_pomeriggio", context);
-        doc_registro = doc_registro.replace("@start_pome", formattedTime(registro.orariostart_pom).replace(":0", ":00"))
-                .replace("@end_pome", formattedTime(registro.orarioend_pom).replace(":0", ":00"));
+        doc_registro = doc_registro.replace("@start_pome", formattedTime(registro.orariostart_pom))
+                .replace("@end_pome", formattedTime(registro.orarioend_pom));
     } else {
         doc_registro = getHtml("doc_registro_individiale_mattina", context);
     }
     doc_registro = controllare === 1 ? (doc_registro + getHtml("doc_registro_individiale_ctrlore", context)) : doc_registro;
-    doc_registro = doc_registro.replace("@start_pome", formattedTime(registro.orariostart_pom).replace(":0", ":00"))
+    doc_registro = doc_registro.replace("@start_pome", formattedTime(registro.orariostart_pom))
             .replace("@date", formattedDate(new Date(registro.giorno)))
             .replace("@docente", registro.docente.cognome + " " + registro.docente.nome)
-            .replace("@start_mattina", formattedTime(registro.orariostart_mattina).replace(":0", ":00"))
-            .replace("@end_mattina", formattedTime(registro.orarioend_mattina).replace(":0", ":00"))
+            .replace("@start_mattina", formattedTime(registro.orariostart_mattina))
+            .replace("@end_mattina", formattedTime(registro.orarioend_mattina))
             .replace("@tot_ore", totalhh);
     ;
-    doc_registro = registro.orericonosciute === null ? doc_registro.replace('@hh', totalhh).replace('@max', totalhh).replace("@msg", "Ore da riconoscere") : doc_registro.replace('@hh', doubletoHHmm(registro.orericonosciute)).replace('@max', totalhh).replace("@msg", "Ore riconosciute");
-
+    doc_registro = registro.orericonosciute === null ? doc_registro.replace('@hh', totalhh).replace('@max', totalhh)
+            .replace("@msg", "Ore da riconoscere") : doc_registro.replace('@hh', doubletoHHmm(registro.orericonosciute))
+            .replace('@max', totalhh).replace("@msg", "Ore riconosciute");
+    alert(totalhh);
     swal.fire({
         title: 'Informazioni Registro',
         html: doc_registro,
@@ -895,8 +899,8 @@ function showRegistroAula(id, control, idprogetto) {
 
     $('#register_docs_modal').append((control === 1 ? form : "") +
             doc.replace("@date", formattedDate(new Date(registro.giorno)))
-            .replace("@start", formattedTime(registro.orariostart).replace(":0", ":00"))
-            .replace("@end", formattedTime(registro.orarioend).replace(":0", ":00"))
+            .replace("@start", formattedTime(registro.orariostart))
+            .replace("@end", formattedTime(registro.orarioend))
             .replace("@docente", registro.docente.cognome + " " + registro.docente.nome)
             .replace("@ore", doubletoHHmm(registro.ore))
             .replace("@ore_conv", registro.ore_convalidate === "00:00" ? "" : doubletoHHmm(registro.ore_convalidate))
@@ -904,8 +908,8 @@ function showRegistroAula(id, control, idprogetto) {
             .replace("@presenti",
                     registro.presenti_list.map(p => {
                         return presenze.replace("@nome", p.cognome + " " + p.nome)
-                                .replace("@in", formattedTime(p.start).replace(":0", ":00"))
-                                .replace("@out", formattedTime(p.end).replace(":0", ":00"))
+                                .replace("@in", formattedTime(p.start))
+                                .replace("@out", formattedTime(p.end))
                                 .replace("@ore", doubletoHHmm(p.ore))
                                 .replace("@max", p.ore)
                                 .replace("@readonly", control === 1 ? "" : "readonly")
@@ -1157,7 +1161,7 @@ function liquida_old(id) {
         title: '<h2 class="kt-font-io-n"><b>Liquida Progetto</b></h2><br>',
         html: html,
         animation: false,
-        width:'50%',
+        width: '50%',
         showCancelButton: true,
         confirmButtonText: '&nbsp;<i class="la la-check"></i>',
         cancelButtonText: '&nbsp;<i class="la la-close"></i>',
