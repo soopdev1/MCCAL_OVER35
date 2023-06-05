@@ -130,7 +130,7 @@ public class ExportExcel {
         Entity e = new Entity();
         e.begin();
 
-        File template = new File(e.getPath("templace_c2"));
+        File template = new File(e.getPath("template_checklist_2"));
         String output_name = e.getPath("pathDocSA_Prg").replace("@rssa", p.getSoggetto().getId().toString()).replace("@folder", p.getId().toString()) + "cl2_" + p.getCip() + ".xlsx";
 
         try {
