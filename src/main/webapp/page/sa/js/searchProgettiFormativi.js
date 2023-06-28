@@ -437,7 +437,7 @@ function swalDocumentAllievo(idallievo) {
 function showRegistro(idregistro) {
     var registro = registri.get(idregistro);
     var doc_registro;
-    if (registro.orariostart_pom != null) {
+    if (registro.orariostart_pom !== null) {
         doc_registro = getHtml("doc_registro_individiale_pomeriggio", context);
         doc_registro = doc_registro.replace("@start_pome", formattedTime(registro.orariostart_pom))
                 .replace("@end_pome", formattedTime(registro.orarioend_pom));

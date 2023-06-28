@@ -416,7 +416,7 @@ public class Database {
     public boolean creastanze_faseB(int idpr) {
         try {
             for (int i = 2; i < 5; i++) {
-                String ins = "INSERT INTO fad_multi (nomestanza,idprogetti_formativi,numerocorso) VALUES ('FAD_" + idpr + "_" + i + "'," + idpr + ",'" + i + "')";
+                String ins = "INSERT INTO fad_multi (nomestanza,idprogetti_formativi,numerocorso) VALUES ('FAD_O_" + idpr + "_" + i + "'," + idpr + ",'" + i + "')";
                 try ( Statement st = this.c.createStatement();) {
                     try {
                         st.executeUpdate(ins);

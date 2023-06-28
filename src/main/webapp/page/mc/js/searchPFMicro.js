@@ -500,9 +500,6 @@ function showRegistro(idregistro, controllare) {
     var doc_registro = "";
     var totalhh = calculateHoursRegistro(registro.orariostart_mattina, registro.orarioend_mattina, registro.orariostart_pom, registro.orarioend_pom);
     totalhh = totalhh.indexOf(":") === 1 ? "0" + totalhh : totalhh;
-    if (totalhh.endsWith(':0')) {
-        totalhh += "0";
-    }
     if (registro.orariostart_pom !== null) {
         doc_registro += getHtml("doc_registro_individiale_pomeriggio", context);
         doc_registro = doc_registro.replace("@start_pome", formattedTime(registro.orariostart_pom))
@@ -521,7 +518,6 @@ function showRegistro(idregistro, controllare) {
     doc_registro = registro.orericonosciute === null ? doc_registro.replace('@hh', totalhh).replace('@max', totalhh)
             .replace("@msg", "Ore da riconoscere") : doc_registro.replace('@hh', doubletoHHmm(registro.orericonosciute))
             .replace('@max', totalhh).replace("@msg", "Ore riconosciute");
-    alert(totalhh);
     swal.fire({
         title: 'Informazioni Registro',
         html: doc_registro,
